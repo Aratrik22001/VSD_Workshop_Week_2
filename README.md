@@ -1,7 +1,20 @@
 # VSD_Workshop_Week_2
+
+In this project I have created a compact, **Open-Source System-on-Chip (SoC)** called **BabySoC**, which I have built upon the lightweight RISC-V processor core **RVMYTH**. I have designed the architecture to handle both digital computation and the integration of analog systems, making it a practical platform for education and experimentation.
+
+The project includes essential components such as a **Phase-Locked Loop (PLL)**, which ensures stable clock signals, and a **10-bit Digital-to-Analog Converter (DAC)** that converts digital data into analog signals. With this feature, BabySoC can connect to consumer electronics like televisions and speakers, enabling audio, video, and other analog applications. This highlights my focus on demonstrating the importance of mixed-signal design in SoC development.
+
+By implementing this design using the **Sky130 open-source technology node**, I aim to promote accessibility and reproducibility, making the project a valuable resource for learners, and researchers alike. In essence, BabySoC reflects my effort to bridge theoretical concepts with practical applications in both **RISC-V architecture** and **open-source semiconductor design**.
+
+## Fundamentals of SoC
+
 <details>
   <summary> THEORY </summary>
 </details>
+
+---
+
+## Lab on Functional Modelling
 
 <details>
 

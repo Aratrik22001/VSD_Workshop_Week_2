@@ -10,7 +10,100 @@ By implementing this design using the **Sky130 open-source technology node**, I 
 
 <details>
   <summary> THEORY </summary>
+
+  <details>
+    
+  <summary> 1. What is a System-on-Chip (SoC)  </summary> 
+
+  
+  A System-on-Chip (SoC) is an integrated circuit that consolidates all the essential components of a computing system into a single chip. Instead of having       separate ICs for processor, memory, and I/O, an SoC brings them together to form a compact, power-efficient, and high-performance solution.  
+  SoCs are ubiquitous in modern electronics, powering devices ranging from smartphones, tablets, and wearables to automotive systems and high-performance          computing solutions.
+  
+  #### Key characteristics of an SoC include:
+  
+  - Integration: Combines CPU, memory, communication interfaces, and specialized accelerators.
+  - Optimization: Designed for specific applications, balancing performance, area, and power.
+  - Scalability: Applicable in both general-purpose and application-specific contexts.
+  
+  </details>
+
+  <details>
+    
+  <summary> 2. Components of a Typical SoC </summary>
+  
+  
+  A typical SoC consists of the following key blocks:
+  
+  - #### <ins> CPU (Processor Core) </ins>
+  
+  The brain of the SoC responsible for executing instructions.
+  Often based on architectures like RISC-V, ARM, or x86.
+  Can be single-core or multi-core, depending on performance needs.
+  
+  - #### <ins> Memory Subsystem </ins>
+  
+    - On-chip memory: SRAM, ROM, cache for high-speed access.
+    - External memory interfaces: DDR, LPDDR, Flash for larger storage.
+    - Critical for providing low-latency and high-bandwidth access to the CPU and peripherals.
+  
+  - #### <ins> Peripherals </ins>
+  
+    - Interfaces such as UART, SPI, I²C, GPIO, and timers.
+    - Enable communication with sensors, displays, and other hardware modules.
+    - Specialized accelerators (e.g., AI/ML units, DSPs, GPU) may also be part of the peripheral set.
+    
+  - #### <ins> Interconnect (Bus/Network-on-Chip) </ins>
+    
+    - Connects CPU, memory, and peripherals.
+    - Can be bus-based (e.g., AMBA AXI/AHB) or network-on-chip (NoC) for complex designs.
+    - Ensures efficient data transfer and arbitration across components.
+
+  </details>
+
+  <details>
+    
+  <summary> 3. Why BabySoC is a Simplified Model for Learning SoC Concepts </summary>
+  
+  Designing a production-grade SoC involves massive complexity. BabySoC is a deliberately simplified model created for educational purposes. It abstracts away     advanced details while preserving the essence of SoC architecture, making it easier for learners to grasp fundamental concepts.
+  
+  #### <ins>Advantages of BabySoC</ins>
+  
+  - Clarity in fundamentals: Focuses on core SoC blocks without overwhelming complexity.
+  - Stepwise learning: Helps beginners understand the flow from CPU to memory and peripherals.
+  - Hands-on approach: Enables early exposure to SoC design methodology, simulation, and functional testing.
+  - Foundation for scalability: Once learners understand BabySoC, they can transition to real-world SoCs.
+
+  </details>
+
+  <details>
+  <summary> 4. The Role of Functional Modelling Before RTL and Physical Design </summary>
+  
+  Before diving into RTL (Register Transfer Level) coding and physical implementation, functional modelling is a crucial step in SoC design.
+  
+  #### 1. <ins> Concept Validation </ins>
+  
+  - Functional models capture the intended behavior of the SoC at a high level.
+  - They allow architects to validate algorithms, data flow, and interactions without worrying about implementation details.
+  
+  #### 2. <ins> Early Debugging </ins>
+  
+  - Identifies logical errors and design bottlenecks before expensive RTL synthesis and backend stages.
+  - Saves time and effort by catching architectural issues early.
+    
+  #### 3. <ins> Performance Estimation </ins>
+  
+  - Helps estimate latency, throughput, and power implications.
+  - Provides insights into trade-offs between hardware complexity and system efficiency.
+    
+  #### 4. <ins> Smooth Transition to RTL </ins>
+  
+  - Functional models act as golden references for RTL designers.
+  - Ensures correctness and consistency when moving toward gate-level and physical design stages.
+  
+  </details>
+    
 </details>
+
 
 ---
 

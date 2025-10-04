@@ -106,6 +106,8 @@ By implementing this design using the **Sky130 open-source technology node**, I 
 
 The **VSDBabySoC** is designed as a compact and educational System-on-Chip (SoC) that integrates three essential building blocks: the **RVMYTH RISC-V CPU**, a **Phase-Locked Loop (PLL)** for clock generation, and a **10-bit Digital-to-Analog Converter (DAC)** for analog interfacing. Together, these components demonstrate how digital computation, precise timing, and mixed-signal integration converge within a real-world SoC.
 
+<img width="993" src="https://github.com/Aratrik22001/VSD_Workshop_Week_2/blob/main/Images/BabySoc.jpg">
+
 
 ### 1. <ins> RVMYTH (RISC-V CPU)</ins>
 
@@ -136,6 +138,8 @@ The **PLL** is a critical subsystem that ensures the BabySoC operates with a sta
   * Provides a synchronized clock across CPU and DAC, ensuring timing integrity.
   * Minimizes clock jitter, delays, and mismatches that could otherwise compromise system performance.
 
+<img width="993" src="https://github.com/Aratrik22001/VSD_Workshop_Week_2/blob/main/Images/PLL.jpg">
+
 * **Why It’s Needed On-Chip**:
 
   * Off-chip clocks often suffer from distribution delays, jitter, or frequency mismatches.
@@ -156,7 +160,16 @@ The **10-bit DAC** in BabySoC bridges the gap between the digital domain of the 
 * **Types of DAC Architectures**:
 
   * *Weighted Resistor DAC*: Uses resistors of varying weights to produce analog outputs.
+  <p align="center">
+    <img src="https://github.com/Aratrik22001/VSD_Workshop_Week_2/blob/main/Images/DAC_weighted.jpg">
+  </p> 
+
+  
   * *R-2R Ladder DAC*: A scalable, resistor-based design, simpler to implement with consistent accuracy.
+  <p align="center">
+    <img width="850" src="https://github.com/Aratrik22001/VSD_Workshop_Week_2/blob/main/Images/R-2R_DAC.jpg">
+  </p>
+  
 * **Function in BabySoC**:
 
   * Receives processed values from RVMYTH’s registers.

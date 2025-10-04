@@ -101,9 +101,81 @@ By implementing this design using the **Sky130 open-source technology node**, I 
   - Ensures correctness and consistency when moving toward gate-level and physical design stages.
   
   </details>
-    
-</details>
 
+  ## BabySoC Components
+
+The **VSDBabySoC** is designed as a compact and educational System-on-Chip (SoC) that integrates three essential building blocks: the **RVMYTH RISC-V CPU**, a **Phase-Locked Loop (PLL)** for clock generation, and a **10-bit Digital-to-Analog Converter (DAC)** for analog interfacing. Together, these components demonstrate how digital computation, precise timing, and mixed-signal integration converge within a real-world SoC.
+
+
+### 1. <ins> RVMYTH (RISC-V CPU)</ins>
+
+The **RVMYTH processor** is the core computational unit of BabySoC. Based on the open-source **RISC-V instruction set architecture (ISA)**, RVMYTH is designed as a lightweight yet fully functional CPU, making it ideal for educational purposes.
+
+* **Instruction Set**: Implements the base RV32I ISA, which includes essential instructions for arithmetic, logic, memory access, and control flow.
+* **Register File**: Contains 32 general-purpose registers, including the **r17 register**, which plays a role in interfacing with the DAC in this design.
+* **Pipeline**: Features a simple, single-cycle or multi-cycle pipeline (depending on the implementation), balancing simplicity with clarity for learners.
+* **Flexibility**: As an open-source CPU, RVMYTH can be customized, extended, and synthesized on open-source tools, making it an excellent platform for experimenting with CPU architecture and SoC integration.
+
+In BabySoC, the RVMYTH processor is responsible for executing instructions, generating digital data streams, and updating values for conversion by the DAC, effectively acting as the "brain" of the system.
+
+
+### 2. <ins>Phase-Locked Loop (PLL)</ins>
+
+The **PLL** is a critical subsystem that ensures the BabySoC operates with a stable and synchronized clock signal. In VSDBabySoC, an **8× PLL multiplier** is used to scale a reference clock input to the desired operating frequency for the CPU and peripherals.
+
+* **Components**:
+
+  * *Phase Detector*: Compares the input reference clock with the feedback clock.
+  * *Loop Filter*: Smooths the phase error signal to control frequency adjustments.
+  * *Voltage-Controlled Oscillator (VCO)*: Generates the output clock frequency, adjusted based on the loop filter’s signal.
+  * *Frequency Divider (optional)*: Used in the feedback path for frequency scaling.
+
+* **Functionality**:
+
+  * Locks the output frequency to the input reference, maintaining a stable phase relationship.
+  * Provides a synchronized clock across CPU and DAC, ensuring timing integrity.
+  * Minimizes clock jitter, delays, and mismatches that could otherwise compromise system performance.
+
+* **Why It’s Needed On-Chip**:
+
+  * Off-chip clocks often suffer from distribution delays, jitter, or frequency mismatches.
+  * Different SoC blocks may need different clock frequencies, which can be generated internally by the PLL.
+  * Crystal oscillator deviations (tolerance, stability, aging) can affect precision; a PLL mitigates these issues by stabilizing the clock.
+
+In short, the PLL is the "heartbeat" of BabySoC, providing precise and reliable timing for digital and mixed-signal operations.
+
+
+### 3. <ins>Digital-to-Analog Converter (DAC)</ins>
+
+The **10-bit DAC** in BabySoC bridges the gap between the digital domain of the RVMYTH processor and the analog world of real devices.
+
+* **Structure**:
+
+  * Accepts a 10-bit binary input (ranging from 0 to 1023).
+  * Produces an analog voltage output proportional to the input digital value.
+* **Types of DAC Architectures**:
+
+  * *Weighted Resistor DAC*: Uses resistors of varying weights to produce analog outputs.
+  * *R-2R Ladder DAC*: A scalable, resistor-based design, simpler to implement with consistent accuracy.
+* **Function in BabySoC**:
+
+  * Receives processed values from RVMYTH’s registers.
+  * Converts these values into analog signals saved in an output file (`OUT`) or driven to external devices.
+  * Enables interfacing with consumer electronics like TVs, speakers, or mobile phones, demonstrating how digital data streams can generate real-world multimedia outputs.
+
+The DAC, therefore, acts as the "voice" of BabySoC, translating raw binary values into meaningful analog waveforms that can be interpreted by external systems.
+
+---
+
+### Summary
+
+* **RVMYTH (CPU):** The computational engine, executing instructions and preparing data.
+* **PLL:** The clock manager, ensuring synchronized, stable operation.
+* **DAC:** The interface to the analog world, converting digital outputs into real signals.
+
+Together, these components embody the essence of a modern SoC—**digital processing tightly coupled with precise timing and analog connectivity**—all implemented on the **Sky130 open-source technology node** to promote accessibility and hands-on learning.
+   
+</details>
 
 ---
 

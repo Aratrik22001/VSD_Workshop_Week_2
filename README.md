@@ -8,7 +8,7 @@ VSDBabySoC/
 │   │   └── other header files...
 │   ├── gls_model/
 │   │   ├── primitives.v
-│   │   ├── sky130_fd_sc_hd.v
+│   │   └── sky130_fd_sc_hd.v
 │   ├── module/
 │   │   ├── vsdbabysoc.v      # Top-level module integrating all components
 │   │   ├── rvmyth.v          # RISC-V core module
@@ -16,12 +16,11 @@ VSDBabySoC/
 │   │   ├── avsddac.v         # DAC module
 │   │   └── testbench.v       # Testbench for simulation
 │   ├── script/
-│   │   ├── yosys.ys          # For Synthesis
+│   │   └── yosys.ys          # For Synthesis
 └── output/
 │   ├── synth
 │   ├── pre_synth_sim
 │   └── post_synth_sim
-└── compiled_tlv/         # Holds compiled intermediate files if needed
 ```
 
 ```bash

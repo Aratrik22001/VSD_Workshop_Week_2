@@ -220,6 +220,8 @@ Together, these components embody the essence of a modern SoC—**digital proces
   ```
   
   ```
+  $ sudo apt install pipx -y
+  $ pipx install sandpiper-saas
   $ sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module
   ```
   

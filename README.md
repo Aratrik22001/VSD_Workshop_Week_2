@@ -195,7 +195,11 @@ Together, these components embody the essence of a modern SoC—**digital proces
 <details>
 
   <summary> LAB </summary>
-    
+
+  Clone the top-level module, that integrates the rvmyth, pll, and dac modules, using this link.
+  [VSDBabySoC](https://github.com/manili/VSDBabySoC.git)
+
+  The Directory Structure of the Project is as follows:    
   ```txt
   VSDBabySoC/
   ├── src/
@@ -218,12 +222,15 @@ Together, these components embody the essence of a modern SoC—**digital proces
   │   ├── pre_synth_sim
   │   └── post_synth_sim
   ```
+  ### Convertion of Transaction-Level Verilog File (rvmyth.tlv) to Verilog File (rvmyth.v)
   
   ```
   $ sudo apt install pipx -y
   $ pipx install sandpiper-saas
   $ sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module
   ```
+  
+
   
   ```
   $ iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM \

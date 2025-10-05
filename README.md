@@ -6,7 +6,7 @@ The project includes essential components such as a **Phase-Locked Loop (PLL)**,
 
 By implementing this design using the **Sky130 open-source technology node**, I aim to promote accessibility and reproducibility, making the project a valuable resource for learners, and researchers alike. In essence, BabySoC reflects my effort to bridge theoretical concepts with practical applications in both **RISC-V architecture** and **open-source semiconductor design**.
 
-## Fundamentals of SoC
+## 📖 Fundamentals of SoC
 
 <details>
   <summary> THEORY </summary>
@@ -190,7 +190,7 @@ Together, these components embody the essence of a modern SoC—**digital proces
 
 ---
 
-## Lab on Functional Modelling
+## 🔬 Lab on Functional Modelling
 
 <details>
 
@@ -289,6 +289,29 @@ Together, these components embody the essence of a modern SoC—**digital proces
   </p> 
   
 </details>
+
+## 🚀 Learning Outcomes
+
+Through the successful completion of **VSD Workshop Week 2**, the following key outcomes were achieved:
+
+1. **Enhanced Understanding of RTL-to-GDS Flow**
+
+   * Gained hands-on experience with the complete digital design flow starting from RTL design, synthesis, floorplanning, placement, clock tree synthesis, routing, and sign-off checks.
+
+2. **SoC Integration Perspective**
+
+   * Explored the integration of standard cells and macros into a design environment, learning how individual blocks fit into a larger system-on-chip (SoC) context.
+
+3. **Practical Debugging and Verification Skills**
+
+   * Improved ability to debug synthesis and physical design issues by analyzing tool logs, reports, and visual layouts, thereby enhancing problem-solving skills in real VLSI workflows.
+
+4. **Workflow Documentation and Reporting**
+
+   * Learned to effectively document each stage of the workflow in a structured manner, reinforcing good practices in collaborative design and knowledge transfer.
+
+---
+
 
 ## 🙏 **Acknowledgment**
 

@@ -267,6 +267,13 @@ Together, these components embody the essence of a modern SoC—**digital proces
   <p align="center">
     <img src="https://github.com/Aratrik22001/VSD_Workshop_Week_2/blob/main/Images/yosys.jpg">
   </p> 
+
+  The synthesized netlist Block Diagram is as follows:
+  <p align="center">
+    <img src="https://github.com/Aratrik22001/VSD_Workshop_Week_2/blob/main/Images/netlist_babysoc.jpg">
+  </p> 
+  
+  ### 5. <ins>Post-Synthesis Simulation</ins>
   
   ```
   $ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 -o output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM \
@@ -276,4 +283,9 @@ Together, these components embody the essence of a modern SoC—**digital proces
   $ ./post_synth_sim.out
   $ gtkwave post_synth_sim.vcd
   ```
+  #### Results and Waveform
+  <p align="center">
+    <img src="https://github.com/Aratrik22001/VSD_Workshop_Week_2/blob/main/Images/post_synth.jpg">
+  </p> 
+  
 </details>

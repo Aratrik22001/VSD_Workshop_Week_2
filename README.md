@@ -29,8 +29,7 @@ By implementing this design using the **Sky130 open-source technology node**, I 
 
   <details>
     
-  <summary> 2. Components of a Typical SoC </summary>
-  
+  <summary> 2. Components of a Typical SoC </summary>    
   
   A typical SoC consists of the following key blocks:
   
@@ -107,7 +106,6 @@ By implementing this design using the **Sky130 open-source technology node**, I 
 The **VSDBabySoC** is designed as a compact and educational System-on-Chip (SoC) that integrates three essential building blocks: the **RVMYTH RISC-V CPU**, a **Phase-Locked Loop (PLL)** for clock generation, and a **10-bit Digital-to-Analog Converter (DAC)** for analog interfacing. Together, these components demonstrate how digital computation, precise timing, and mixed-signal integration converge within a real-world SoC.
 
 <img width="993" src="https://github.com/Aratrik22001/VSD_Workshop_Week_2/blob/main/Images/BabySoc.jpg">
-
 
 ### 1. <ins> RVMYTH (RISC-V CPU)</ins>
 
